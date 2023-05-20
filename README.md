@@ -1,12 +1,14 @@
 # Diamond-Price-Prediction
 Diamond Price Prediction is a linear regression problem predict the market price in US dollars of a diamond by using the data-set I have (the price depended on the diamond features).
 Diamond Price Prediction
+
+
 Framing the Problem
 The diamond is very rare precious stone and therefore Diamonds are considered to be Very Costly.
 Some big company need to know the updated market price (in US dollars) of any diamond it sells. This is a classic regression (i.e., evaluation) problem, in which I need to collect the relevant data, build a useful model and estimate the expected error.
 So, I need to build a model which predicts the market price in US dollars of a diamond by using the data-set I have (the price depended on the diamond features).
 Have a high-accuracy with smallest mean square error is our goal.
-EDA
+
 1-	Analyze data-set :
 •	Carat Weight: 0.2Kg - 5.01Kg
 •	Cut: Describe cut quality of the diamond Fair, Good, Very Good, Premium, Ideal
@@ -27,6 +29,8 @@ Categorical: Cut, Color, Clarity.
 Numerical: Carat, Depth, Table, Price, X, Y, Z.
 Target: price
  
+
+
 2-	Cleaning data: 
 •	drop the Id column as we already have Indexed dataframe.
 3-	Visualization data:
@@ -40,6 +44,10 @@ Target: price
 •	The next block of code calculates the parameters of the fitted normal distribution curve. norm.fit(df['price']) uses the fit method of the scipy.stats.norm object to estimate the mean and standard deviation of the normal distribution that best fits the data.
 
 •	The final block of code creates a legend for the plot, showing the values of the mean and standard deviation of the fitted normal distribution. It also generates a QQ plot using stats.probplot function from the scipy.stats module, which helps to visually assess whether the data follows a normal distribution or not.
+
+
+
+
 Preprocessing Data
 •	x,y,z:  there is 17 sample with incorrect values x,y,z =0 we will drop it 
 •	outliers: replace all outliers with Nan
@@ -49,6 +57,9 @@ Feature Engineering
 •	drop unneeded column: x,y,z
 Feature Scaling
 •	scaling numerical value: split the training data for train and validation and then fit transform the train data using standard Scaler and transform for validation.
+
+
+
 Modeling
 •	start with Linear Regression and we got the rmse is = 939.9 and it is not good result and the score =88%
 •	trying mor complex model like Decision Tree Regressor rmse is=502.6 it is better than linear model and the score= 96% I think it is high but this is the best result? Let see cross validation score and try new model
